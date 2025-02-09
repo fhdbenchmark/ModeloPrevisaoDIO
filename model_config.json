@@ -1,0 +1,22 @@
+{
+  "model": {
+    "name": "Modelo de Previsão de Preços de Casas",
+    "version": "1.0",
+    "description": "Modelo de regressão para prever preços de casas com base em características como área, número de quartos e localização.",
+    "parameters": {
+      "learning_rate": 0.01,
+      "num_trees": 200,
+      "max_depth": 10,
+      "min_samples_split": 5,
+      "random_state": 42
+    },
+    "endpoint": {
+      "url": "https://my-azure-endpoint.azurewebsites.net/api/v1/predict",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+      }
+    }
+  }
+}
